@@ -1,0 +1,28 @@
+// errores fpc.cpp : Defines the entry point for the console application.
+// Autor: Fernando
+// Fecha: 25/02/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+using namespace std; 
+
+
+
+int main() {
+	float base,altura,area;
+	cout<<"ingrese la altura:";
+
+	cin>>altura;
+	cout<<"ingrese la base:";
+	cin>>base;
+	area = (base*altura);
+	cout<<"el area es:";
+	cout<<area;
+	getch();
+
+
+}
+
