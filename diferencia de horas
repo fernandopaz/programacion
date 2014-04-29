@@ -1,0 +1,38 @@
+// Diferencia de horas.cpp : Defines the entry point for the console application.
+// Nombre:Fernando Paz C.
+// Fecha:29/04/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+
+void main ()
+{
+float Hora,Minuto,Segundo,hora,min,seg,t,r,p;
+cout<<"ingrese el valor de las horas del primer reloj: ";
+cin>>Hora;
+cout<<"ingrese el valor de los minutos del primer reloj: ";
+cin>>Minuto;
+cout<<"ingrese el valor de los segundos de primer reloj: ";
+cin>>Segundo;
+cout<<"ingrese el valor de las horas del segundo reloj: ";
+cin>>hora;
+cout<<"ingrese el valor de los minutos del segundo reloj: ";
+cin>>min;
+cout<<"ingrese el valor de los segundos del segundo reloj: ";
+cin>>seg;
+if((Hora<24)&&(hora<24))
+   t=hora*3600-Hora*3600;
+cout<<t;
+if((Minuto<60)&&(min<60))
+   r=min*60-Minuto*60;
+cout<<r;
+if((Segundo<60)&&(seg<60))
+  p=seg-Segundo;
+cout<< p;
+getch();
+}
+
+
