@@ -1,0 +1,38 @@
+// serie.cpp : Defines the entry point for the console application.
+// autor: fernando paz coimbra
+// fecha: 6/05/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main ()
+{
+	float N,x,sig,s,i,f;
+
+	cout<<"ingresar N:";
+	cin>>N;
+	cout<<"ingresar x:";
+	cin>>x;
+
+	f=1;
+	sig=1;
+	s=5;
+	for(i=1;i<=N;i++)
+	{
+		f=f*(i+1);
+		s=s-sig*(pow(x,i))/f;
+		sig=-1*sig;
+     }
+
+ cout<<"la suma sera:"<<s;
+ getch();
+
+}
+
+
+	
+		    
+
