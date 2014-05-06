@@ -1,0 +1,30 @@
+// Serie Factorial.cpp : Defines the entry point for the console application.
+//Autor:Fernando Paz C.
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+void main()
+{
+int c,x,d,s;
+float i;
+cout<< "Ingrese el numero: ";
+cin>> c;
+s=0;
+i=0;
+while(c>0)
+{
+	d=c%10;
+	c=c/10;
+	s=s+d*pow(x,i);
+	i=i+1;
+}
+cout<< "El valor del numero en base decimal es: ";
+cout<< s;
+getch();
+}
+
+
