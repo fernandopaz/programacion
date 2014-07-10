@@ -1,0 +1,41 @@
+/*-------------------------------------------------------------------
+Programa:       Esfera.cpp
+Version:        V1
+Fecha:          10/7/14
+Autor:          Fernando
+Obs:            Ingresando el Diametro calcula la circunferencia,area y volumen
+----------------------------------------------------------------*/
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "stdlib.h"
+
+#define PI 3.14159
+
+
+void main()
+
+{float D,Per,Ar,Vol;
+int cont;
+do
+{
+
+do 
+   {printf("\n Ingrese el diametro [D>0]"); 
+   scanf("%f",&D);
+   }while(D<=0);
+   Per = PI*D;
+   Ar = PI*D*D;
+   Vol= PI*D*D*D/6;
+   printf("\n Perimetro %6.2f",Per);
+   printf("\n Area      %6.2f",Ar);
+   printf("\n Volumen   %6.2f\n\n",Vol);
+   printf("\n\n DESEA CONTINUAR? [SI=1]");
+   scanf("%d",&cont);
+}while(cont==1);
+   system("pause");
+
+}
+
+
