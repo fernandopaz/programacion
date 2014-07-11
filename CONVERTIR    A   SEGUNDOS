@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------------------
+ Programa:    Inversion.cpp
+ Version:     V1
+ Fecha:       11/07/14
+ Autor:       Fernando
+ Obs:         Calula Interes simple y compuesto
+ ---------------------------------------------------------------*/
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "math.h"
+
+void main()
+
+{int H,M,S,SO,cont;
+do
+{do
+{printf("\n\n Ingrese los segundos:  ");
+ scanf("%d",&S);
+}while (S<=0);
+SO = S;
+H = S/3600;
+S = S%3600;
+M = S/60;
+S = S/60;
+
+
+printf("\n\n Los  %d  segundos dan",SO);
+printf("\n\n  %d Horas %d Minutos %d segundos",H,M,S);
+printf("\n\n Desea continuar? [1-> Si]");
+scanf("%d",&cont);
+}while(cont==1);
+
+}
