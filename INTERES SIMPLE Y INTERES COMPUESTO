@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------------------
+ Programa:    Interes S.cpp
+ Version:     V1
+ Fecha:       11/07/14
+ Autor:       Fernando
+ Obs:         Calula Interes simple y compuesto
+ ---------------------------------------------------------------*/
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "math.h"
+
+void main()
+{float C,T,Is,Ic;
+int N,cont;
+do
+{do
+{printf("\n\n Ingrese el Capital:  ");
+ scanf("%f",&C);
+}while (C<=0);
+do
+{printf("\n\n Ingrese la Tasa [1 al 100 ]:  ");
+ scanf("%f",&T);
+}while (T<=0);
+do
+{printf("\n\n Ingrese los Periodos:  ");
+ scanf("%d",&N);
+}while (N<=0);
+// calculo del interes simple
+Is = C*T*N/100; 
+// calculo del interes compuesto
+Ic = C*(pow((1+T/100),N)-1);
+printf("\n   Capital:            %5.2f",C);
+printf("\n   Tasa Interes:       %5.2f",T);
+printf("\n   Periodos:           %d",N);
+printf("\n   Interes Simple:     %5.2f",Is);
+printf("\n   Interes Compuesto:  %5.2f",Ic);
+
+
+printf("\n\n Desea continuar? [1-> Si]");
+scanf("%d",&cont);
+}while(cont==1);
+}
