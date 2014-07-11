@@ -1,0 +1,38 @@
+/*------------------------------------------------------------------------------
+ Programa:    Inversion.cpp
+ Version:     V1
+ Fecha:       11/07/14
+ Autor:       Fernando
+ Obs:         Calula Interes simple y compuesto
+ ---------------------------------------------------------------*/
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "math.h"
+
+void main()
+
+{int N,R,IN,NO,cont;
+do
+{do
+{printf("\n\n Ingrese un numero:  ");
+ scanf("%d",&N);
+}while (N<=0);
+NO = N;
+IN = 0;
+while (N>0)
+{R = N%10;
+ N = N/10;
+ IN =IN*10+R;
+}
+printf("\n\n el invertido de %d es %d",NO,IN);
+
+
+
+printf("\n\n Desea continuar? [1-> Si]");
+scanf("%d",&cont);
+}while(cont==1);
+
+}
