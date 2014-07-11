@@ -1,0 +1,71 @@
+/*------------------------------------------------------------------------------
+ Programa:    Diferencia de horas.cpp
+ Version:     V1
+ Fecha:       11/07/14
+ Autor:       Fernando
+ Obs:         Calula Interes simple y compuesto
+ ---------------------------------------------------------------*/
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdio.h"
+#include "math.h"
+#include "stdlib.h"
+
+void main()
+
+{int H1,M1,S1,H2,M2,S2,T1,T2,cont,D;
+do
+{system("cls"); system("color f5");
+do
+{printf("\n\n Ingrese Hora 1 :  ");
+ scanf("%d",&H1);
+}while (H1>23 || H1<0);
+
+do
+{printf("\n\n Ingrese Miunto 1 :  ");
+ scanf("%d",&M1);
+}while (M1>59 || M1<0);
+
+do
+{printf("\n\n Ingrese Segundo 1 :  ");
+ scanf("%d",&S1);
+}while (S1>59 || S1<0);
+
+do
+{printf("\n\n Ingrese Hora 2 :   ");
+ scanf("%d",&H2);
+}while (H2>23 || H2<0);
+
+do
+{printf("\n\n Ingrese Miunto 2 :  ");
+ scanf("%d",&M2);
+}while (M2>59 || M2<0);
+
+do
+{printf("\n\n Ingrese Segundo 2:  ");
+ scanf("%d",&S2);
+}while (S2>59 || S2<0);
+
+T1 = H1*3600+M1*60+S1;
+T2 = H2*3600+M2*60+S2;
+
+if(T1 > T2)
+{ D = T1-T2;
+}
+else
+{D = T2-T1;
+}
+H1 = D/3600;
+D = D%3600;
+M1 = D/60;
+S1 = D%60;
+
+
+printf("\n\n El tiempo transcurrido es %d Horas %d Minutos %d segundos",H1,M1,S1);
+printf("\n\n Desea continuar? [1-> Si]");
+scanf("%d",&cont);
+}while(cont==1);
+
+}
