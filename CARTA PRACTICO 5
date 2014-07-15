@@ -1,0 +1,71 @@
+//carta.cpp
+//NUMERO 1 DEL PRACTICO 5
+
+
+#include "stdafx.h"
+#include "conio.h"
+#include "stdlib.h"
+#include "stdio.h"
+
+void main()
+{
+	int opc,cont;
+    float peso,importe;
+	cont=0;
+	importe=0;
+    do
+	{
+	
+    do
+	 {
+	 printf("\n\n Ingrese el peso de la carta:  ");
+	 scanf("%f",&peso);
+     }while(peso <=0);
+    if(peso<=50)
+      {importe = importe + 1.5;
+	   cont=cont+1;
+      }
+    else
+	{  if(peso<=100)
+      {importe = importe + 4.0;
+	   cont=cont+1;
+	  }
+ 
+      else
+      {
+	    if(peso<=200)
+	    {importe = importe + 6.0;  
+		 cont=cont+1;
+	    }
+	    else{
+		    if(peso<=300)
+		    {importe = importe + 10.5;
+			 cont=cont+1;
+		    }
+		    else{
+			     if(peso<=500)
+
+			     {importe = importe + 15;
+				  cont=cont+1;
+                 }
+				 else{printf("\n\n NO SE PUEDE ENVIAR ");
+				     }
+			   }
+		}
+	}
+   
+	}
+
+
+ 
+ printf("\n\n Se enviaron %d cartas y el importe total es %f",cont,importe);
+ printf("\n\n enviar otra carta:[1->Si]");
+ scanf("%d",&opc);
+ 
+}while(opc==1);
+}
+
+
+
+
+
